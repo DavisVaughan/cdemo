@@ -1,2 +1,4 @@
 ^cdemo\.Rproj$
 ^\.Rproj\.user$
+^\.vscode$
+^debug$
