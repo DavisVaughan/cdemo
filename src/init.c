@@ -7,11 +7,15 @@
 #define export attribute_visible extern
 
 extern SEXP c_my_fun(SEXP);
+extern SEXP c_times_two_bad(SEXP);
 extern SEXP c_times_two(SEXP);
+extern SEXP c_times_two_no_protect(SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
   {"c_my_fun", (DL_FUNC) &c_my_fun, 1},
+  {"c_times_two_bad", (DL_FUNC) &c_times_two_bad, 1},
   {"c_times_two", (DL_FUNC) &c_times_two, 1},
+  {"c_times_two_no_protect", (DL_FUNC) &c_times_two_no_protect, 1},
   {NULL, NULL, 0}
 };
 
